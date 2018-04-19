@@ -8,20 +8,27 @@ function requestHandler(request, response) {
     console.log(request.url);
 
     let parsed = url.parse(request.url, true);
-    let name = parsed.query['name'];
-    if (!name) {
-        response.end('I don\'t know!');
+    let rx1 = parsed.query['rx1'];
+    let rx2 = parsed.query['rx2'];
+    let ry1 = parsed.query['ry1'];
+    let ry2 = parsed.query['ry2'];
+    let px = parsed.query['px'];
+    let py = parsed.query['py'];
+
+    if (!(rx1 && rx2 && ry1 && ry2 && px && py)) {
+        response.end('Invalid query');
         return
     }
 
-    try {
-        console.log(`finding ${name}`);
-        response.end(info.getInfoByName(name));
+    if (info.isPointInArea(
+        parseFloat(px), parseFloat(py),
+        parseFloat(rx1), parseFloat(ry1),
+        parseFloat(rx2), parseFloat(ry2))) {
+
+        response.end('Point in Area');
     }
-    catch (e) {
-        console.log(e);
-        response.writeHead(404);
-        response.end('I don\'t know!');
+    else {
+        response.end('Point not in Area');
     }
 }
 
