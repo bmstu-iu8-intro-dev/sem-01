@@ -4,7 +4,7 @@ let info = require('../info');
 
 function test1(){
     it('Point (0, 0) in area [(-1, -1), (1, 1)]', function () {
-        assert.equal(info.isPointInArea(0, 0, -1, -1, 1, 1), false);
+        assert.equal(info.isPointInArea(0, 0, -1, -1, 1, 1), true);
     });
 }
 
