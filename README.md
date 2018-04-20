@@ -18,7 +18,7 @@
 ### IDE
 Будем использовать кроссплатформенную среду разработки [WebStorm](https://jetbrains.ru/products/webstorm/).
 
-### Simple web сервер
+### Simple web server
 ```js
 const http = require('http');
 
