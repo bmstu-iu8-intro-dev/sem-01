@@ -1,11 +1,10 @@
 language: node_js
 node_js:
-  - "node"
-
+- node
 after_success:
-  - npm run coveralls
-
+- npm run coveralls
 deploy:
   provider: heroku
-  api_key: $HEROKU_API
+  api_key:
+    secure: WjxchSc6aRgUKwO7EQaz9IAv94a2AAbv1T1xqxJpUSlT439zyV23QOCBSMoT2eNId+6znrTncpyiDewchgHQibE4l0sSTeHJeuQqfT/+/BbA9Rbs/zFEyft4G9YNvCNyoRYyDnpYVC7CUCG3R8Ticy64UCuKCcZlzSq7yfkeN9Xr80OSzpZw0dc/KZ+lsMZ6GgZ8uZlCRAOglZv3+wx8U+m6Rw38CmnDxZlzb94Sfu08L94SDhHAkTOkp+f7sUpUl/ch53H92YZqckF0ORpImeLw+nFCKNxcVkxk4K+eArCd6baGShpVhAjsBLSWPSyTncQtRmLpjKTvOjDMlDuYFMGaO3DhWvt+6UmQ1toWG2Ggy/LhgEK1IsKaTrR2pnQ1Y4TPC+ve2+QDOgIO0ZbK0vyVPOFRq5ATejapSB4QxMp9e4Gs/0lAksFSSYtePmYfQ40aNJuffcOOm22YtvXvHhHt6xo7BYBSR/hy56FdwLOOmiz9SKiHsZM24ycdab0krigZJwmFZX8HW3fPzN2V5etDoyuYmCuXP/TLQWv87+/OivyjncH7E+O9j4L0PUsmZaFom81YI4QzYKxCR/NLMuV2FX35oMJbd0wudXjH0xK78OY8T0het4axfd4Q4Ol2e/AV6RcHq7zgh1R4myuolWuyeGiF88AnauWRfjKifWI=
   app: intro-dev-sem-01
