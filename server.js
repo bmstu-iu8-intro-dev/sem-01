@@ -41,4 +41,4 @@ function listenCallback(err) {
 }
 
 const server = http.createServer(requestHandler);
-server.listen(port, listenCallback);
+server.listen(process.env.PORT || port, listenCallback);
