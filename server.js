@@ -16,6 +16,7 @@ function requestHandler(request, response) {
     let py = parsed.query['py'];
 
     if (!(rx1 && rx2 && ry1 && ry2 && px && py)) {
+        response.writeHeader(400);
         response.end('Invalid query');
         return
     }
