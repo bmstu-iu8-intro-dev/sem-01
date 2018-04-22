@@ -130,6 +130,8 @@ node_js:
   }
 }
 ```
+[![Build Status](https://travis-ci.org/bmstu-iu8-intro-dev/sem-01.svg?branch=master)](https://travis-ci.org/bmstu-iu8-intro-dev/sem-01)
+
 Теперь после каждого изменения репозитория TravisCI будет запускать модульное тестирование кода.
 
 
@@ -231,6 +233,9 @@ after_success:
 ```
 
 Зарегистрируемся в [Coveralls.io](https://coveralls.io) и активируем репозиторий с кодом.
+
+[![Coverage Status](https://coveralls.io/repos/github/bmstu-iu8-intro-dev/sem-01/badge.svg)](https://coveralls.io/github/bmstu-iu8-intro-dev/sem-01)
+
 С этого момента TravisCI запускает тестирование кода, считает покрытие кода тестами и публикует результат в Coveralls и разворачивает приложение на Heroku.
 
 ## Заключение
