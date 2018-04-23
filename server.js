@@ -1,19 +1,17 @@
 const info = require('./info');
-const http = require('http');
-const url = require('url');
+const express = require('express');
 
 const port = 8000;
 
 function requestHandler(request, response) {
     console.log(request.url);
 
-    let parsed = url.parse(request.url, true);
-    let rx1 = parsed.query['rx1'];
-    let rx2 = parsed.query['rx2'];
-    let ry1 = parsed.query['ry1'];
-    let ry2 = parsed.query['ry2'];
-    let px = parsed.query['px'];
-    let py = parsed.query['py'];
+    const rx1 = request.query.rx1;
+    const rx2 = request.query.rx2;
+    const ry1 = request.query.ry1;
+    const ry2 = request.query.ry2;
+    const px = request.query.px;
+    const py = request.query.py;
 
     if (!(rx1 && rx2 && ry1 && ry2 && px && py)) {
         response.writeHeader(400);
@@ -41,5 +39,6 @@ function listenCallback(err) {
     console.log(`server is listening on ${port}`)
 }
 
-const server = http.createServer(requestHandler);
-server.listen(process.env.PORT || port, listenCallback);
+const app = express();
+app.get('/', requestHandler);
+app.listen(process.env.PORT || port, listenCallback);
