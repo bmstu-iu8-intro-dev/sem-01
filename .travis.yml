@@ -1,8 +1,18 @@
 language: node_js
 node_js:
 - node
+
+sudo: required
+
+services:
+  - docker
+  
 after_success:
 - npm run coveralls
+- docker build -f Dockerfile -t drewxa/sem01 .
+- docker login -u drewxa -p $DOCKER_PASSWORD
+- docker push drewxa/sem01
+
 deploy:
   provider: heroku
   api_key:
