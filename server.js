@@ -6,12 +6,7 @@ const port = 8000;
 function requestHandler(request, response) {
     console.log(request.url);
 
-    const rx1 = request.query.rx1;
-    const rx2 = request.query.rx2;
-    const ry1 = request.query.ry1;
-    const ry2 = request.query.ry2;
-    const px = request.query.px;
-    const py = request.query.py;
+    const {rx1, rx2, ry1, ry2, px, py} = request.query;
 
     if (!(rx1 && rx2 && ry1 && ry2 && px && py)) {
         response.writeHeader(400);
