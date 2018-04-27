@@ -263,4 +263,7 @@ after_success:
 * настройте автоматическую выкладку вашего сервиса на Heroku из ветки release.
 
 ## Полезные ссылки
-
+* [Как создать современную CI/CD-цепочку с помощью бесплатных облачных сервисов](https://habr.com/company/southbridge/blog/329262/)
+* [Travis & Heroku](https://docs.travis-ci.com/user/deployment/heroku)
+* [Continuously deploy Node apps with GitHub, Travis and Heroku](https://shapeshed.com/continuously-deploy-node-apps-with-github-travis-and-heroku/)
+* [Node Hero - Node.js Unit Testing Tutorial](https://blog.risingstack.com/node-hero-node-js-unit-testing-tutorial/)
