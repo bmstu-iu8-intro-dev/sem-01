@@ -266,4 +266,5 @@ after_success:
 * [Как создать современную CI/CD-цепочку с помощью бесплатных облачных сервисов](https://habr.com/company/southbridge/blog/329262/)
 * [Travis & Heroku](https://docs.travis-ci.com/user/deployment/heroku)
 * [Continuously deploy Node apps with GitHub, Travis and Heroku](https://shapeshed.com/continuously-deploy-node-apps-with-github-travis-and-heroku/)
+* [Unit tests & coverage for your open source project](http://dsernst.com/2015/09/02/node-mocha-travis-istanbul-coveralls-unit-tests-coverage-for-your-open-source-project/)
 * [Node Hero - Node.js Unit Testing Tutorial](https://blog.risingstack.com/node-hero-node-js-unit-testing-tutorial/)
